@@ -1,0 +1,26 @@
+% 请将以下所需的宏包添加到文档前言：
+% \usepackage{booktabs}
+% \usepackage{multirow}
+\begin{table}[ht]
+\caption{各种任务中使用的经典算法}
+\resizebox{0.6\textwidth}{!}{ % 调整表格宽度以适应页面
+
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+\textbf{任务}                                          & \textbf{目标}                                 & \textbf{策略}      & \textbf{原理}        & \textbf{年份} \\ \midrule
+\multirow{6}{*}{\textbf{自适应码率}}            & \multirow{6}{*}{重缓冲、比特率、比特率变化}   & Pensieve           & 基于强化学习        & 2017          \\
+                                                       &                                              & Genet             & 基于强化学习        & 2022          \\
+                                                       &                                              & MPC               & 动态规划            & 2015          \\
+                                                       &                                              & BBA               & 基于缓冲区          & 2014          \\
+                                                       &                                              & BOLA              & 基于缓冲区          & 2016          \\
+                                                       &                                              & NetLLM            & 基于Transformer     & 2024          \\ \midrule
+\multirow{6}{*}{\textbf{拥塞控制}}                      & \multirow{6}{*}{吞吐量、丢包、延迟}           & CUBIC             & 基于丢包            & 1990年代       \\
+                                                       &                                              & Reno              & 基于丢包            & 1990年代       \\
+                                                       &                                              & WestWood          & 基于丢包            & 2002          \\
+                                                       &                                              & BBR               & 基于带宽-延迟积     & 2015          \\
+                                                       &                                              & Aurora            & 基于强化学习        & 2019          \\
+                                                       &                                              & Sage              & 基于强化学习        & 2023          \\ \bottomrule
+\end{tabular}
+}
+\label{table_task_algo}
+\end{table}

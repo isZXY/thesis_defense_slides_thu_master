@@ -1,0 +1,35 @@
+\begin{figure}[ht]
+\centering
+\begin{subfigure}[t]{0.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/chap03/evaluation_plots/reward_value.pdf}
+  \caption{训练奖励累计}
+  \label{fig-reward-func}
+\end{subfigure}%
+\hspace{0.02\linewidth} % 调整左右图之间的间距
+\begin{subfigure}[t]{0.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/chap03/evaluation_plots/bandwidth.pdf}
+  \caption{带宽利用率}
+  \label{fig-band-util}
+\end{subfigure}
+
+\vspace{-0.1cm} % 减少图形之间的垂直间距
+
+\begin{subfigure}[t]{0.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/chap03/evaluation_plots/cdf_delay.pdf}
+  \caption{延迟CDF}
+  \label{fig-latency-cdf}
+\end{subfigure}%
+\hspace{0.02\linewidth} % 调整左右图之间的间距
+\begin{subfigure}[t]{0.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/chap03/evaluation_plots/jitter_times.pdf}
+  \caption{抖动次数}
+  \label{fig-jitter-times}
+\end{subfigure}
+
+\caption{训练及运行性能}
+\label{fig-evaluation-result}
+\end{figure}

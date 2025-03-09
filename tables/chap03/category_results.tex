@@ -1,0 +1,31 @@
+\begin{table}[ht]
+\centering
+\caption{游戏的 SI 和 TI 使用 K-Means 方法进行分类的结果,准确率：89.4\%}
+\resizebox{0.66\columnwidth}{!}{%
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+游戏 & TI & SI & K-means分类 & 正确分类 \\ \midrule
+3D-RPG I           & 8.10  & 48.73  & 高敏感度          & 是                    \\
+TPS I              & 18.42 & 55.39  & 高敏感度          & 是                    \\
+\textbf{FPS III}   & 18.22 & 67.94  & 高敏感度          & 是                    \\
+FPS IV             & 17.69 & 71.55  & 高敏感度          & 是                    \\
+\textbf{FPS II}    & 16.55 & 72.05  & 高敏感度          & 是                    \\
+\textbf{CCG I}     & 2.12  & 74.63  & 低敏感度           & 是                    \\
+Sport III          & 11.29 & 77.00  & 低敏感度           & 否 (中敏感度)                   \\
+3D-RPG II          & 10.31 & 80.21  & 低敏感度           & 是                    \\
+A-RPG I            & 4.03  & 81.97  & 低敏感度           & 是                    \\
+MMORPG II          & 14.02 & 84.21  & 低敏感度           & 是                    \\
+MMORPG I           & 21.34 & 86.12  & 低敏感度           & 是                    \\
+\textbf{MOBA I}    & 3.40  & 87.00  & 低敏感度           & 是                    \\
+\textbf{MOBA II}   & 3.74  & 87.51  & 低敏感度           & 是                    \\
+FPS I              & 27.74 & 89.25  & 低敏感度           & 否 (高敏感度)
+                        \\
+Casual III         & 10.73 & 91.49  & 中敏感度          & 是                    \\
+Casual II          & 8.39  & 92.64  & 中敏感度          & 是                    \\
+\textbf{Sport I}   & 11.76 & 103.32 & 中敏感度          & 是                    \\
+\textbf{2D-RPG I}  & 8.13  & 108.18 & 中敏感度          & 是                    \\
+\textbf{2D-RPG II} & 17.33 & 119.28 & 中敏感度          & 是                    \\ \bottomrule
+\end{tabular}
+}
+\label{tab_cat_gor}
+\end{table}

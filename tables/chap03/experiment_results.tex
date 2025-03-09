@@ -1,0 +1,33 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+\begin{table}[ht]
+\caption{Sense的QoE实验结果与其他方法对比}
+\vspace{-0.5em}
+\renewcommand{\arraystretch}{0.8} % 调整竖直方向的行高
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}cccccccccc@{}}
+\toprule
+网络条件 & 游戏类型分类 & 方法 & 平均延迟 & 尾部延迟 (95\%) & 平均 r($L_{MTP}$) & 平均发送速率(Kbps) & $R_slog(s)$ & 抖动次数 & 最终 QoE \\ \midrule
+\multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}高吞吐量\\      ($\geq$ 10Mbps)\end{tabular}} & \multirow{3}{*}{高敏感度} & ReCoCo               & 50.501          & 101.166             & 2.802             & 4748.340               & 4.610    & 6            & 1.728          \\
+                                                                                                      &                            & GCC                  & 53.776          & 130.871             & 2.563             & 1926.600               & 3.935    & 3            & 1.687          \\
+                                                                                                      &                            & \textbf{Sense(提出方法)} & 50.600          & 102.690             & 2.794             & 4379.535               & 4.549    & 3            & \textbf{1.898} \\ \cmidrule(l){2-10} 
+                                                                                                      & \multirow{3}{*}{中敏感度}    & ReCoCo               & 50.501          & 101.166             & 3.739             & 4748.340               & 4.610    & 6            & 1.962          \\
+                                                                                                      &                            & GCC                  & 53.776          & 130.871             & 3.621             & 1926.600               & 3.935    & 3            & 1.952          \\
+                                                                                                      &                            & \textbf{Sense(提出方法)} & 50.600          & 101.000             & 3.736             & 2795.595               & 4.214    & 1            & \textbf{2.175} \\ \cmidrule(l){2-10} 
+                                                                                                      & \multirow{3}{*}{低敏感度}       & ReCoCo               & 50.501          & 101.166             & 4.424             & 4748.340               & 4.610    & 6            & 2.133          \\
+                                                                                                      &                            & GCC                  & 53.776          & 130.871             & 4.292             & 1926.600               & 3.935    & 3            & 2.119          \\
+                                                                                                      &                            & \textbf{Sense(提出方法)} & 51.726          & 105.333             & 4.376             & 4582.741               & 4.583    & 0            & \textbf{2.490} \\ \midrule
+\multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}低吞吐量\\      (\textless 10Mbps)\end{tabular}}     & \multirow{3}{*}{高敏感度} & \textbf{ReCoCo}      & 53.771          & 110.143             & 2.563             & 237.945                & 2.371    & 4            & \textbf{1.234}          \\
+                                                                                                      &                            & GCC                  & 177.772         & 1277.680            & 1.000             & 186.950                & 2.190    & 2            & 0.923          \\
+                                                                                                      &                            & Sense(提出方法)          & 66.761          & 210.250             & 1.720             & 277.849                & 2.487    & 3            & 1.114          \\ \cmidrule(l){2-10} 
+                                                                                                      & \multirow{3}{*}{中敏感度}    & ReCoCo               & 53.771          & 110.143             & 3.622             & 237.945                & 2.371    & 4            & 1.498          \\
+                                                                                                      &                            & GCC                  & 177.772         & 1277.680            & 1.000             & 186.950                & 2.190    & 2            & 0.923          \\
+                                                                                                      &                            & \textbf{Sense(提出方法)} & 60.397          & 111.000             & 3.373             & 271.060                & 2.468    & 2            & \textbf{1.585} \\ \cmidrule(l){2-10} 
+                                                                                                      & \multirow{3}{*}{低敏感度}       & \textbf{ReCoCo}      & 53.771          & 110.143             & 4.292             & 237.945                & 2.371    & 4            & \textbf{1.666}          \\
+                                                                                                      &                            & GCC                  & 177.772         & 1277.680            & 1.000             & 186.950                & 2.190    & 2            & 0.923          \\
+                                                                                                      &                            & Sense(提出方法)          & 67.640          & 220.200             & 3.533             & 230.204                & 2.346    & 2            & 1.595          \\ \bottomrule
+\end{tabular}
+}
+    \label{tab:exp_results}
+\end{table}

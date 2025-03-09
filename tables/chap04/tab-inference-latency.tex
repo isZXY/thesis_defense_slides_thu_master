@@ -1,0 +1,19 @@
+\begin{table}[ht]
+\centering
+\caption{大语言模型推理过程中的时间消耗}
+\scalebox{0.85}{
+
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+项目                                & 模型         & 量化方式   & 运行GPU             & 延迟\footnote{ https://arthurchiao.art/blog/gpt-as-a-finite-state-markov-chain-zh/}   \\ \midrule
+理论                                 & Mistral-7B   & 16位       & RTX 4090(1008 GB/s) & 14.1ms/Token                \\
+理论                                 & Mistral-7B   & 8位        & RTX 4090            & \textbf{7ms/Token}          \\
+实际                                 & ChatGLM3-6B  & 16位       & RTX 4090(2022)      & 16ms/Token                  \\
+实际                                 & ChatGLM3-6B  & 16位       & V100 32GB (2017)    & 32ms/Token                  \\
+实际                                 & Qwen-7B      & 16位       & RTX 4090(2022)      & 19ms/Token                  \\
+CC                                  & /            & /           & /                   & 1$\sim$3 RTT (10$\sim$50ms) \\ \bottomrule
+\end{tabular}
+}
+
+\label{infer_latn}
+\end{table}
